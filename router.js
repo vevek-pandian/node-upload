@@ -1,8 +1,8 @@
-function route(handlers, pathname) {
+function route(handler, pathname) {
     console.log("You are inside the router " + pathname);
 
-    if(typeof handlers[pathname] === 'function') {
-        return handlers[pathname]();
+    if(typeof handler[pathname] === 'function') {
+        return handler[pathname]();
     }
     else {
         console.log("No request handlers " + pathname);
